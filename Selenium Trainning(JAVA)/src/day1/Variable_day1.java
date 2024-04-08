@@ -16,7 +16,7 @@ public class Variable_day1 {
 		
 		//Creat a Variable-1.provide datatype and Variable name
 		//Interger
-		int age =40;
+		int age =50;
 		String name="Pratibha";
 		char inital ='p';
 		//double,float,long
