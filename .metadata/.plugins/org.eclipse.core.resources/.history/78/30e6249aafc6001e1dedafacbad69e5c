@@ -1,0 +1,17 @@
+package day2;
+
+public class ComparisonOperator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		int a = 5;
+		int b = 4;
+		
+		boolean c = (a<b);
+		  System.out.println(c);
+
+	}
+
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+	<test name="Test">
+		<groups>
+		<dependencies>
+      <group name="Smoke" depends-on="Sanity" />
+       </dependencies>	
+		</groups>
+		<classes>
+     <class name="day30.GroupDependsOn" />
+			<!--  <class name="day28.AnnotationHierarchy"/>
+     <class name="day28.CreatLeadusingTestNg"/>
+     <class name="day29.TestPriority"/>
+<class name="day29.Leads"/>
+<class name="day29.Opportunity"/> 
+<class name="day29.parameterization"/>
+ <parameter name="MyName" value ="Pratibha"/>
+<parameter name="Myaddress" value ="Grorgia"/> -->
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+

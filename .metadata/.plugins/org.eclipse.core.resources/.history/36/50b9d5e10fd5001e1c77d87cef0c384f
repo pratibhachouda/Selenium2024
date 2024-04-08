@@ -1,0 +1,18 @@
+package day14;
+import java.util.Hashtable;
+public class HashTable {
+
+	public static void main(String[] args) {
+		Hashtable<Integer,String> ht = new Hashtable<Integer,String>();
+		ht.put(101, "Richa");
+		ht.put(102, "Rashmi");
+		ht.put(103, "Manu");
+		ht.put(105, "Anita");
+		ht.put(104, "Kiran");
+		//ht.put(106, null);
+		//ht.put(null, null);
+		//ht.put(null, "Rekha");
+		System.out.println(ht);
+	}
+
+}

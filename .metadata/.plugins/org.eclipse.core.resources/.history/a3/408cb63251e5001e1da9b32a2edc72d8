@@ -1,0 +1,44 @@
+package day26;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class TabsExercise {
+           public static void main(String[] args) {
+			WebDriverManager.chromedriver().setup();
+			ChromeDriver driver = new ChromeDriver();
+			driver.get("https://jqueryui.com/tabs/");
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			driver.manage().window().maximize();
+			driver.findElement(By.xpath("//div[@id='content']")).click();
+			WebElement frame = driver.findElement(By.xpath("//div[@id='content']"));
+		 driver.switchTo().frame(0);
+		 Actions action=new Actions(driver);
+		 List<WebElement> Tabs = driver.findElements(By.xpath("//li[@role='tab']"));
+		 List<WebElement> tabcontent = driver.findElements(By.xpath("//li[@role='tab']"));
+		 int Tottab = Tabs.size();
+			System.out.println("tab  Size :" + "   "+Tottab);
+			boolean tabs= driver.findElement(By.xpath("//li[@role='tab']")).isDisplayed();
+			
+			for(WebElement tab:Tabs) {
+				for(WebElement content1:  tabcontent) {
+					action.click(tab).perform();
+					
+					
+					System.out.println("Title:"+ "  "+tab.getText());
+					System.out.println("content:"+ "  "+content1.getText());
+				
+					
+				}
+			}
+			
+	}
+
+}

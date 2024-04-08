@@ -1,0 +1,71 @@
+package day25;
+
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Alerts {
+
+
+	public static void main(String[] args) throws InterruptedException {
+	
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://demo.automationtesting.in/Alerts.html");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
+		driver.findElement(By.xpath("//a[normalize-space()='Alert with OK']")).click();
+		driver.findElement(By.xpath("//button[@class='btn btn-danger']")).click();
+		Thread.sleep(1000);
+		Alert alert =driver.switchTo().alert();
+		System.out.println(alert.getText());
+		alert.accept();
+		driver.findElement(By.linkText("Alert with OK & Cancel")).click();
+		driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
+		
+		//alert.accept();
+		Thread.sleep(1000);
+		alert.dismiss();
+		System.out.println(driver.findElement(By.id("demo")).getText());
+		driver.findElement(By.xpath("//a [contains(text(),'Alert with Textbox ')]")).click();
+		driver.findElement(By.xpath("//button[@class='btn btn-info']")).click();
+		alert.sendKeys("Selenium Tester");
+
+		alert.accept();
+		System.out.println(driver.findElement(By.id("demo1")).getText());
+		Thread.sleep(2000);
+		
+        driver.findElement(By.xpath("//*[@id=\"header\"]/nav/div/div[2]/ul/li[5]/a")).click();
+ 
+	    driver.findElement(By.xpath("//*[@id=\"header\"]/nav/div/div[2]/ul/li[5]/ul/li[4]/a")).click();
+	   //driver.findElement(By.xpath("//a[@class='ui-slider-handle ui-state-default ui-corner-all']")).click();
+	    WebElement Blueslider = driver.findElement(By.id("slider"));
+         System.out.println("Slider found");
+        int widthofslider=Blueslider.getSize().getWidth();
+        System.out.println("Blueslider size:"+widthofslider);
+        int NewPosition=widthofslider/2;
+        System.out.println("New Position:"+NewPosition);
+        //moving slider by using action class
+        Actions action = new Actions(driver);
+        action.dragAndDropBy(Blueslider, 150, 250).perform();
+        System.out.println("After moving Forward:"+Blueslider.getLocation());
+        action.dragAndDropBy(Blueslider, -150, 250).perform();
+        System.out.println("After moving Backward:"+Blueslider.getLocation());
+     // driver.findElement(By.xpath("//*[@id=\"header\"]/nav/div/div[2]/ul/li[5]/a")).click();
+        Thread.sleep(2000);
+        WebElement country=  driver.findElement(By.xpath("//[@class='ui-autocomplete-input']")) ;
+	   // driver.findElement(By.xpath("//input[@class='ui-autocomplete-input']")).sendKeys(Keys.ARROW_DOWN);
+	    
+	    
+	    
+}
+}

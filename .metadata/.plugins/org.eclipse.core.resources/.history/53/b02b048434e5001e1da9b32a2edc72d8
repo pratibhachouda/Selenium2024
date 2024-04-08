@@ -1,0 +1,30 @@
+package day26;
+
+
+	import java.time.Duration;
+	import org.openqa.selenium.interactions.Actions;
+    import io.github.bonigarcia.wdm.WebDriverManager;
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.chrome.ChromeDriver;
+	public class TooltipExercise {
+           public static void main(String[] args) {
+			WebDriverManager.chromedriver().setup();
+			ChromeDriver driver = new ChromeDriver();
+			driver.get("https://jqueryui.com/menu/");
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			driver.manage().window().maximize();
+			driver.findElement(By.xpath("//a[@href='https://jqueryui.com/tooltip/']")).click();
+			WebElement parentframe= driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
+			driver.switchTo().frame(0);
+			Actions action = new Actions(driver);
+			WebElement tt = driver.findElement(By.xpath("//a[@href='#']"));
+			action.moveToElement(tt).perform();
+			WebElement ttText = driver.findElement(By.xpath("//div[@class = 'ui-tooltip-content']"));
+			
+			System.out.println("ToolTip Says :"+ "  " +ttText.getText());
+
+		}
+
+	}
+

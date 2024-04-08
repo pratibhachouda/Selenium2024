@@ -1,0 +1,30 @@
+package day14;
+
+
+import java.util.Iterator;
+import java.util.TreeSet;
+
+
+public class LargeSmallAscendingDesending {
+
+	public static void main(String[] args) {
+
+    	TreeSet<Integer>  tset1 = new  TreeSet<>();
+    	tset1.add(10);
+    	tset1.add(5);
+    	tset1.add(2);
+    	tset1.add(10);
+    	tset1.add(4);
+    	tset1.add(8);
+    	
+    	
+    	
+    		
+    		System.out.println("First No is:" +tset1.first());
+    		System.out.println("Last No is:"+ tset1.last());
+    		Iterator<Integer>  itr= tset1.iterator();
+    		while(itr.hasNext());
+    	
+    	
+}
+}

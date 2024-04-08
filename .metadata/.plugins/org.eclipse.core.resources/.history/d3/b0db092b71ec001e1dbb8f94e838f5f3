@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel ="false" name="Suite">
+	<test name="Alert ParallerTest">
+		<classes>
+		<class name="day32.ParallelTesting" />
+
+		</classes>
+	</test> <!-- ParallerTest -->
+</suite> <!-- Parallel Testing -->

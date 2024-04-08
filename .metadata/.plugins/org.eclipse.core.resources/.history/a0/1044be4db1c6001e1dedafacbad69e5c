@@ -1,0 +1,27 @@
+package day2;
+
+public class ComparisonOperator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// == is equal to
+		// <= less than equal to
+		// >= grater than equal to
+		// <= less than 
+		// >= grater than 
+		int a = 4;
+		int b = 5;
+		
+		boolean c = (a!=b);
+		  System.out.println(c);
+
+		  double x = 4.9;
+		  double y = 5.567; 
+		  
+		  boolean z = (a!=b); 
+		  
+		  
+		  
+	}
+
+}

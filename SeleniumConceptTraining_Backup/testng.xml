@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="tests" name="Suite">
+    <test thread-count="2" name="MultipleBrowserTesting1">
+		<parameter name="browser" value="Chrome"></parameter>
+		<classes>
+			<class name="day32.CrossBrowserTesting" />
+		</classes>
+	</test>
+	<test thread-count="2" name="MultipleBrowserTesting2">
+		<parameter name="browser" value="Edge" />
+		<classes>
+			<class name="day32.CrossBrowserTesting" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
