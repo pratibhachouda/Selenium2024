@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-18T15:21:48 EDT" name="Default suite" finished-at="2024-04-18T15:21:53 EDT" duration-ms="4688">
+  <suite started-at="2024-04-18T19:42:08 EDT" name="Default suite" finished-at="2024-04-18T19:42:11 EDT" duration-ms="3053">
     <groups>
     </groups>
-    <test started-at="2024-04-18T15:21:48 EDT" name="Default test" finished-at="2024-04-18T15:21:53 EDT" duration-ms="4688">
-      <class name="apiTest.GetRequestTest">
-        <test-method signature="getAllIncident()[pri:0, instance:apiTest.GetRequestTest@9597028]" started-at="2024-04-18T15:21:48 EDT" name="getAllIncident" finished-at="2024-04-18T15:21:52 EDT" duration-ms="3182" status="PASS">
+    <test started-at="2024-04-18T19:42:08 EDT" name="Default test" finished-at="2024-04-18T19:42:11 EDT" duration-ms="3053">
+      <class name="apiTest.postRequestTest">
+        <test-method signature="creatIncident()[pri:0, instance:apiTest.postRequestTest@1189dd52]" started-at="2024-04-18T19:42:08 EDT" name="creatIncident" finished-at="2024-04-18T19:42:11 EDT" duration-ms="3001" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAllIncident -->
-        <test-method signature="getIncident()[pri:0, instance:apiTest.GetRequestTest@9597028]" started-at="2024-04-18T15:21:52 EDT" name="getIncident" finished-at="2024-04-18T15:21:53 EDT" duration-ms="1455" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getIncident -->
-      </class> <!-- apiTest.GetRequestTest -->
+        </test-method> <!-- creatIncident -->
+      </class> <!-- apiTest.postRequestTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
