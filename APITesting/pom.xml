@@ -12,6 +12,7 @@
     <scope>test</scope>
 
 </dependency>
+
 <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-jdk14 -->
 <dependency>
     <groupId>org.slf4j</groupId>
@@ -20,9 +21,9 @@
     <scope>test</scope>
 </dependency>
 
-
-
 </dependencies>
+
+
 <build>
     <plugins>
         <plugin>
@@ -34,7 +35,7 @@
             </configuration>
         </plugin>
     </plugins>
-</build>
+</build> 
 
 
 </project>

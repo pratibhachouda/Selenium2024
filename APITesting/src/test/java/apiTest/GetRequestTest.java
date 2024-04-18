@@ -1,5 +1,5 @@
-package apiTest;
 
+package apiTest;
 
 import org.testng.annotations.Test;
 
@@ -11,8 +11,7 @@ import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 
 
-
-public class NewTest {
+public class GetRequestTest {
 
 	@Test
 	public void getAllIncident() {
@@ -47,5 +46,3 @@ public class NewTest {
 	}   
   
 }
-
-
