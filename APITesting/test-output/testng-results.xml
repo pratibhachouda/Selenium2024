@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-18T19:42:08 EDT" name="Default suite" finished-at="2024-04-18T19:42:11 EDT" duration-ms="3053">
+  <suite started-at="2024-04-19T14:32:27 EDT" name="Default suite" finished-at="2024-04-19T14:32:29 EDT" duration-ms="2249">
     <groups>
     </groups>
-    <test started-at="2024-04-18T19:42:08 EDT" name="Default test" finished-at="2024-04-18T19:42:11 EDT" duration-ms="3053">
-      <class name="apiTest.postRequestTest">
-        <test-method signature="creatIncident()[pri:0, instance:apiTest.postRequestTest@1189dd52]" started-at="2024-04-18T19:42:08 EDT" name="creatIncident" finished-at="2024-04-18T19:42:11 EDT" duration-ms="3001" status="PASS">
+    <test started-at="2024-04-19T14:32:27 EDT" name="Default test" finished-at="2024-04-19T14:32:29 EDT" duration-ms="2249">
+      <class name="apiTest.PatchRequestTest">
+        <test-method signature="UpdatingThroughPatchrequest()[pri:0, instance:apiTest.PatchRequestTest@1189dd52]" started-at="2024-04-19T14:32:27 EDT" name="UpdatingThroughPatchrequest" finished-at="2024-04-19T14:32:29 EDT" duration-ms="2208" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- creatIncident -->
-      </class> <!-- apiTest.postRequestTest -->
+        </test-method> <!-- UpdatingThroughPatchrequest -->
+      </class> <!-- apiTest.PatchRequestTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

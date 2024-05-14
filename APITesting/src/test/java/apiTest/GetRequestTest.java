@@ -26,12 +26,12 @@ public class GetRequestTest {
 	}
 
 	@Test
-	public void getIncident() {
+	public void getIncident_sys_id() {
 
 		RestAssured.baseURI = "https://dev211885.service-now.com/api/now/table/incident";
 		RestAssured.authentication = RestAssured.basic("admin", "O@cP0kFs6qV=");
 		RequestSpecification httpRequest = RestAssured.given();
-		Response response = httpRequest.queryParam("number", "INC0000001").get();
+		Response response = httpRequest.queryParam("sys_id","2acd6c5b93e102105be8fcf08bba10fb").get();
 		// Retrieving the response Body using get Body Method
 		ResponseBody body = response.body();
 		// converting the response Body to string object
@@ -42,6 +42,8 @@ public class GetRequestTest {
 		System.out.println(body.asPrettyString());
 		System.out.println("short_description"+short_description);
 		System.out.println(jpath.getString("result.resolved_by.value"));
+		
+		
 
 	}   
   
